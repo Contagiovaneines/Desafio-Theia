@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Values.configmap.name }}
+  name: {{ .Values.configmap.name | quote }}
 data:
-  login: {{ .Values.configmap.data.login }}
-  password: {{ .Values.configmap.data.password }}
-  
-  
+  login: {{ .Values.configmap.data.login | quote }}
+  password: {{ .Values.configmap.data.password | quote }}
