@@ -99,16 +99,6 @@ tolerations: []
 
 affinity: {}
 
-livenessProbe:
-  httpGet:
-    path: /
-    port: http
-
-readinessProbe:
-  httpGet:
-    path: /
-    port: http
-    
 configmap:
   name: giovane
   data: 
