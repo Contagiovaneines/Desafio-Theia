@@ -8,7 +8,7 @@ image:
   repository: theiaide/theia
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
+  tag: ""
 
 #strategyType: Recreate
 
@@ -44,7 +44,6 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
-  targetPort: 3000
 
 ingress:
   enabled: false
@@ -101,14 +100,14 @@ tolerations: []
 affinity: {}
 
 configmap:
-  name: giovane
-  data: 
-    login: giovane
-    password: giovane
+  name: theia
+  data:
+    login: theia
+    password: theia2023
 
 secret:
-  name: giovane
+  name: theia
   data:
-    username: Z2lvdmFuZQo=
-    password: Z2lvdmFuZQo=
+    username: dGhlaWEK
+    password: dGhlaWEyMDIzCg==
   type: Opaque
